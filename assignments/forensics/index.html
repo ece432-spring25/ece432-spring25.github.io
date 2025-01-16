@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>COS 432/ECE 432 - Spring 2023</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../../css/logo-nav.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../../index.html">
+        <img src="../../images/key.svg" width="60" height="60" alt=""> COS 432/ECE 432 - Spring 2023
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">Overview
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../schedule.html">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../assignments.html">Assignments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../resources.html">Resources</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container-fluid">
+    <h5 class="mt-5">Assignment 6: Forensics (Group Assignment)</h5>
+    <ul class="text-right list-inline">
+      <li class="list-inline-item"><a class="social-icon text-xs-center" target="_blank"
+          href="cos432-forensics.zip">Download Files &dArr;</a></li>
+      <li class="list-inline-item"><a class="social-icon text-xs-center" target="_blank"
+          href="https://www.gradescope.com">Submit Files &uArr;</a></li>
+    </ul>
+
+    <h5 class="mt-5">Introduction</h5>
+    <p>
+      In this project, you will play the role of a forensic analyst who is investigating a murder. The
+      accused is Bob, who has fled the country and disappeared. Officers have seized a disk image of
+      Bob’s computer. </p>
+    <p>
+      Your job is to conduct a forensic examination of a disk image and document any evidence related to
+      the murder. If you find sufficient evidence, a case can be brought against Bob. </p>
+
+
+
+    <h5 class="mt-5">Objectives</h5>
+    <ul>
+      <li>Understand how computer use can leave persistent traces and why such evidence is often
+        difficult to remove or conceal.</li>
+      <li>Gain experience applying the security mindset to investigate computer misuse and intrusion.</li>
+      <li>Learn how to retrieve information from a disk image without booting the operating system,
+        and understand why this is necessary to preserve forensic integrity.</li>
+    </ul>
+
+
+    <h5 class="mt-5">Getting Started</h5>
+    <p>
+      The <a href="forensics_instructions.pdf">Forensics VM Instructions for x86</a> document contains step-by-step
+      instructions to set up the virtual
+      machine and analyze the forensics disk image. If your device uses an ARM chip like the M1 Mac, you should follow
+      the instructions in the <a href="forensics_instructions_m1.pdf">Forensics VM Instructions for M1 Macs</a>
+      document. </p>
+
+    <h5 class="mt-5"> Tasks and Deliverables </h5>
+    <p> You will provide an answer file <code>tokens.txt</code>, together with a directory <code> evidence/</code>
+      containing all relevant evidence you discover. Your answers should be <i>complete</i> but <i>concise</i>. You may
+      use the directory template that we have provided you <a href="cos432-forensics.zip">here</a>.</p>
+
+    <p> <b><code>tokens.txt</code></b> As you complete the investigation, you will encounter "tokens" that represent major steps
+      or important files. Most of the tokens are a string of words at the end of a file, separated by a single character each.
+      Other tokens are simply passwords or monetary transaction identifiers. Place these in <code>tokens.txt</code>, separated by newlines. 
+      <b> For each token you find, please also write 2-3 sentences briefly explaining how you obtain the token.</b> 
+      This file will be the bulk of your assignment grade. To receive full credit, you'll need to submit the following tokens:</p>
+    <ul>
+      <li>At least 1 password</li>
+      <li>At least 6 (out of 9) two-word tokens</li>
+      <li>At least 3 (out of 4) three-word tokens</li>
+      <li>At least 2 (out of 4) transaction ID (limit 1) or four-word tokens</li>
+    </ul>
+    <p><b><code>evidence/</code></b> Whenever you find a piece of evidence (e.g., a token), you must include a file or screenshot
+      demonstrating where you found it. This directory should contain things like files containing tokens, screenshots of where you 
+      found a token, programs you wrote to crack passwords, etc. You should not need more than one file in this directory per token you found.</p>
+
+    <h5 class="mt-5">Useful Links</h5>
+    <ul>
+      <li><a href="../netsec/vm_instructions.pdf">VM instructions</a></li>
+      <li><a href="forensics_instructions.pdf">Forensics VM Instructions (x86)</a></li>
+      <li><a href="forensics_instructions_m1.pdf">Forensics VM Instructions (ARM / M1 Macs)</a></li>
+    </ul>
+
+    <h5 class="mt-5"> Policies and Hints </h5>
+    <p><b>Collaboration outside of your group</b> is strictly limited to conceptual topics discussed in lecture.
+      Much of this assignment is focused on a group exploring possibilities and trying things themselves.
+      The number of pieces of evidence you find, the techniques you try, how successful said techniques are,
+      the general process you follow, etc. are all considered part of your solution and must not be discussed with
+      members of other groups. You are free to search online for generic techniques and tutorials so long as you respect the
+      collaboration policy of this course and cite all sources.
+
+    <p> <b>Cracking passwords</b> is a required task in this project. It is sufficient to bruteforce these passwords (i.e., guess and check).
+      It is highly recommended you use <a href="https://gist.githubusercontent.com/h3xx/1976236/raw/bbabb412261386673eff521dddbe1dc815373b1d/wiki-100k.txt">this dictionary</a>
+      for these bruteforcing attacks. Any bruteforcing you do in this assignment should not take more than a few hours.
+      If anything you run exceeds this, let us know on Ed and we can confirm whether you are on the right track.</p>
+
+    <p><b>Network attacks</b> are <em>not</em> required in this project. You should not conduct any network attacks.
+      Other than using online informational resources, you do not even need an internet connection to complete this project.
+    </p>
+    <h5 class="mt-5">Submission Checklist</h5>
+    <p>Submit your files as a single zip file to <a href="https://www.gradescope.com">Gradescope</a>. Make sure you
+      select all your group members when submitting. The zip file should contain the files / directories below:</p>
+    <ul style="list-style-type:none;">
+      <li>&#9633; <code>tokens.txt</code> - A plain text file with your discovered tokens and brief explanations of how
+        you discovered them. </li>
+      <li>&#9633; <code>evidence/</code> - A directory containing any recovered file(s).</li>
+    </ul>
+
+  </div>
+
+
+
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
